@@ -33,6 +33,9 @@ public class BinaryNextNumber {
 
     public static void main(String[] args) {
         BinaryNextNumber binaryNextNumber = new BinaryNextNumber();
-        System.out.println(binaryNextNumber.binaryNextNumber("10"));
+        String num = "10";
+        System.out.println(binaryNextNumber.binaryNextNumber(num));
+        String num2 = "100";
+        System.out.println(binaryNextNumber.binaryNextNumber(num2));
     }
 }
