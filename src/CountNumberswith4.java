@@ -9,7 +9,7 @@
 
 
 public class CountNumberswith4 {
-        public static int countNumberswith4(int n) {
+        public static int countNumbersWith4(int n) {
             // code here
             int count = 0;
             for (int i = 1; i <= n; i++) {
@@ -21,7 +21,8 @@ public class CountNumberswith4 {
         }
 
     public static void main(String[] args) {
-        System.out.print(countNumberswith4(9));
+        int n = 9; 
+        System.out.print(countNumbersWith4(n));
     }
 
     }
