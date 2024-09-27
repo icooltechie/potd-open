@@ -24,5 +24,8 @@ public class ArmstrongNumber {
     public static void main(String[] args) {
         int n = 153;
         System.out.println(armstrongNumber(n));
+        // adding negative test case as well.
+        int n = 353;
+        System.out.println(armstrongNumber(n));
     }
 }
