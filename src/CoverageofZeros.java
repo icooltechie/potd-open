@@ -16,49 +16,16 @@ public class CoverageofZeros {
         int col = matrix[0].length;
         int count = 0;
         int left = 0, right = 0, up = 0, buttom = 0;
+        
         for(int i=0; i<row; i++){
             for(int j=0; j<col; j++){
-                if(matrix[i][j] == 1){
-
-                 /*
-                 // First Logic
-
-                    if(j > 0 &&  matrix[i][j-1] == 0){
-                        count++;
-                    }
-                    if(j < col - 1 && matrix[i][j+1] == 0){
-                        count++;
-                    }
-
-                    if(i > 0 &&  matrix[i-1][j] == 0){
-                        count++;
-                    }
-                    if(i < row - 1 && matrix[i+1][j] == 0){
-                        count++;
-                    }
-            */
-
-                    // Secound Logic
-
-            /*
-                 left += j > 0 &&  matrix[i][j-1] == 0 ? 1 : 0;
-                 right += j < col - 1 &&  matrix[i][j+1] == 0 ? 1 : 0;
-                 up  += i > 0 &&  matrix[i-1][j] == 0 ? 1 : 0;
-                 buttom += i < row-1 && matrix[i+1][j] == 0 ? 1 : 0;
-
-            */
-
-                    // Third Logic
-
+                if(matrix[i][j] == 1){                    
+                    // Logic
                     left = j > 0 &&  matrix[i][j-1] == 0 ? count++ : 0;
                     right = j < col - 1 &&  matrix[i][j+1] == 0 ? count++ : 0;
                     up  = i > 0 &&  matrix[i-1][j] == 0 ? count++ : 0;
                     buttom = i < row-1 && matrix[i+1][j] == 0 ? count++ : 0;
-
-
                 }
-
-                //  count = left + right + up + buttom;
             }
         }
         return count;
