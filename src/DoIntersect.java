@@ -22,15 +22,18 @@ public class DoIntersect {
         if(o4 == 0 && onSegment(p2, p1, q2)) return "true";
         return "false";
     }
-    int orientation(int p[], int q[], int r[]){
-        long value = (long)(q[1]-p[1])*(r[0]-q[0]) - (long)(q[0]-p[0])*(r[1]-q[1]);
-        if(value == 0) return 0;
-        return (value > 0) ? 1 : 2;
-    }
+    
     boolean onSegment(int p[], int q[], int r[]){
         if(q[0] <= Math.max(p[0], r[0]) && q[0] >= Math.min(p[0], r[0]) &&
                 q[1] <= Math.max(p[1], r[1]) && q[1] >= Math.min(p[1], q[1])) return true;
         return false;
     }
+    
+    int orientation(int p[], int q[], int r[]){
+        long value = (long)(q[1]-p[1])*(r[0]-q[0]) - (long)(q[0]-p[0])*(r[1]-q[1]);
+        if(value == 0) return 0;
+        return (value > 0) ? 1 : 2;
+    }
+ 
 
 }
