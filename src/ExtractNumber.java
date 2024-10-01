@@ -9,9 +9,10 @@
 
 public class ExtractNumber {
     long ExtractNumber(String sentence) {
-        // code here
-        String[] arr=sentence.split("\\s+");
-        long largeNum=-1;
+        
+        String[] arr = sentence.split("\\s+");
+        long largeNum = -1;
+        
         for(int i=0;i<arr.length;i++){
             if(Character.isDigit(arr[i].charAt(0)) && !arr[i].contains("9")){
                 long currNum=Long.parseLong(arr[i]);
@@ -20,12 +21,13 @@ public class ExtractNumber {
                 }
             }
         }
+        
         return largeNum;
     }
 
     public static void main(String[] args) {
-        ExtractNumber en=new ExtractNumber();
-        String sentence="This is alpha 5057 and 97";
+        ExtractNumber en = new ExtractNumber();
+        String sentence = "This is alpha 5057 and 97";
         System.out.println(en.ExtractNumber(sentence));
     }
 }
