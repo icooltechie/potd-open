@@ -34,7 +34,9 @@ public class BracketNumbers {
     }
 
     public static void main(String[] args) {
+        
         BracketNumbers bracketNumbers = new BracketNumbers();
-        System.out.println(bracketNumbers.bracketNumbers("(aa(bdc))p(dee)"));
+        ArrayList<Integer> bracketNumbersArr = bracketNumbers.bracketNumbers("(aa(bdc))p(dee)");
+        System.out.println(bracketNumbersArr);
     }
 }
